@@ -1,0 +1,43 @@
+{
+  "domain": "localhost",
+  "title": "Your SaaS Title",
+  "catchPhrase": "Launch your product fast!",
+  "description": "A modern SaaS starter kit for rapid product launches",
+  "features": [
+    {
+      "title": "Fast Setup",
+      "description": "Get your SaaS up and running in minutes",
+      "icon": "⚡"
+    },
+    {
+      "title": "Modern Stack",
+      "description": "Built with Next.js, TypeScript, and TailwindCSS",
+      "icon": "🚀"
+    },
+    {
+      "title": "Scalable",
+      "description": "Ready to scale with your business",
+      "icon": "📈"
+    }
+  ],
+  "pricing": {
+    "plans": [
+      {
+        "name": "Starter",
+        "price": 9,
+        "period": "month",
+        "features": ["Feature 1", "Feature 2", "Feature 3"]
+      },
+      {
+        "name": "Pro",
+        "price": 29,
+        "period": "month",
+        "features": ["Everything in Starter", "Feature 4", "Feature 5"]
+      }
+    ]
+  },
+  "contact": {
+    "email": "hello@yourdomain.com",
+    "twitter": "@yourhandle"
+  }
+}

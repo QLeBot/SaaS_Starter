@@ -29,21 +29,21 @@ print_error() {
 }
 
 # Check if apps/web already exists
-if [ -d "apps/web" ]; then
-    print_warning "apps/web already exists. Do you want to overwrite it? (y/N)"
+if [ -d "apps/frontend" ]; then
+    print_warning "apps/frontend already exists. Do you want to overwrite it? (y/N)"
     read -r response
     if [[ ! "$response" =~ ^[Yy]$ ]]; then
         print_status "Skipping frontend setup"
         exit 0
     fi
-    rm -rf apps/web
+    rm -rf apps/frontend
 fi
 
 # Create apps directory if it doesn't exist
 mkdir -p apps
 
 print_status "Creating Next.js app with TypeScript..."
-npx create-next-app@latest web \
+npx create-next-app@latest frontend \
     --typescript \
     --tailwind \
     --eslint \
@@ -55,8 +55,8 @@ npx create-next-app@latest web \
     --yes
 
 # Move to apps/web
-mv web apps/web
-cd apps/web
+mv frontend apps/frontend
+cd apps/frontend
 
 print_status "Installing additional dependencies..."
 
@@ -472,11 +472,11 @@ cd ../..
 print_success "Frontend setup complete!"
 echo ""
 print_status "Next steps:"
-echo "1. cd apps/web"
+echo "1. cd apps/frontend"
 echo "2. npm install"
 echo "3. npm run dev"
 echo ""
 print_status "Don't forget to:"
 echo "- Update packages/config/landing.json with your content"
-echo "- Configure environment variables in apps/web/.env.local"
+echo "- Configure environment variables in apps/frontend/.env.local"
 echo "- Set up authentication (Clerk or Supabase) if needed" 
