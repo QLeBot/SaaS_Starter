@@ -5,13 +5,8 @@ import { Footer } from "@/components/Footer"
 import { HeroSection } from "@/components/LandingPage/HeroSection"
 import { FeaturesSection } from "@/components/LandingPage/FeaturesSection"
 import { HowItWorksSection } from "@/components/LandingPage/HowItWorksSection"
-import { TestimonialsSection } from "@/components/LandingPage/TestimonialsSection"
-import { PricingSection } from "@/components/LandingPage/PricingSection"
-import { FAQSection } from "@/components/LandingPage/FAQSection"
-import { CTASection } from "@/components/LandingPage/CTASection"
-import { DemoSection } from "@/components/LandingPage/DemoSection"
 
-export default function LandingPage() {
+export default function BasicLandingPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col">
       <NavBar 
@@ -19,7 +14,6 @@ export default function LandingPage() {
         links={[
           { label: "Home", href: "/" },
           { label: "Features", href: "#features" },
-          { label: "Pricing", href: "#pricing" },
           { label: "About", href: "/about" },
           { label: "Contact", href: "/contact" },
         ]}
@@ -28,20 +22,16 @@ export default function LandingPage() {
         <HeroSection 
           badgeText="Launching Soon"
           badgeVariant="secondary"
-          buttons={[
-            { text: "Start Free Trial", variant: "default", className: "rounded-full h-12 px-8 text-base" },
-            { text: "Book a Demo", variant: "outline", className: "rounded-full h-12 px-8 text-base" },
-          ]}
+          showEmailInput={true}
+          onEmailSubmit={(email) => {
+            console.log("Email submitted:", email);
+          }}
+          buttons={[]}
         />
-        <DemoSection />
         <FeaturesSection />
         <HowItWorksSection />
-        <TestimonialsSection />
-        <PricingSection />
-        <FAQSection />
-        <CTASection />
       </main>
       <Footer productName="SaaSify" />
     </div>
   )
-}
+} 

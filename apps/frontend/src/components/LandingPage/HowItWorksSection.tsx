@@ -1,3 +1,5 @@
+import { Badge } from "@/components/ui/badge"
+
 export function HowItWorksSection() {
   const steps = [
     {
@@ -18,7 +20,10 @@ export function HowItWorksSection() {
   ]
   return (
     <section className="w-full py-20 md:py-32 bg-muted/30">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
+        <Badge className="rounded-full px-4 py-1.5 text-sm font-medium mb-4" variant="secondary">
+          How It Works
+        </Badge>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-4">Simple Process, Powerful Results</h2>
         <p className="max-w-[800px] text-muted-foreground md:text-lg text-center mx-auto mb-12">
           Get started in minutes and see the difference our platform can make for your business.

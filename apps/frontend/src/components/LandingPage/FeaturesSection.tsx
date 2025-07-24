@@ -38,7 +38,7 @@ const features = [
 export function FeaturesSection() {
   return (
     <section id="features" className="w-full py-20 md:py-32">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <Badge className="rounded-full px-4 py-1.5 text-sm font-medium mb-4" variant="secondary">
           Features
         </Badge>
