@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { LoginButton } from "@/components/LoginButton";
 
 interface NavBarLink {
   label: string
@@ -71,7 +72,10 @@ export function NavBar({ className, productName = "SaaS Starter", links = [
             <NavBarBrand productName={productName} />
           </div>
           {/* Navigation Links - Right Side */}
-          <NavBarLinks links={links} />
+          <div className="flex items-center space-x-4">
+            <NavBarLinks links={links} />
+            <LoginButton />
+          </div>
         </div>
       </div>
     </nav>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/Input"
+import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Mail } from "lucide-react"
 import React, { useState } from "react"
